@@ -53,8 +53,6 @@ if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocMana
 BiocManager::install(c("phyloseq", "clusterProfiler", "KEGGREST", "microbiome"))
 ```
 
-The exact package versions of a run are written to `outputs/sessionInfo.txt`.
-
 ## Input data
 
 The input files are not in this repository. 
@@ -136,8 +134,6 @@ Everything is written to the folder set in `CFG$dir_out` (default `outputs/`).
 | `TableS_*.tsv` | Supplementary tables: KEGG categories by fraction, KO diversity and coverage, KO partition by zone, pathway and KO ratios, leading KOs of Figure 4D, over-representation analysis, nitrogen gene families |
 | `alpha_taxonomic_hill_q1.tsv` | Hill number of order 1 per sample, with confidence limits |
 | `check_*.tsv` | Supporting checks: detection limit, paired dissimilarity, sensitivity to typical contaminant genera, lineage of ORFs |
-| `numbers_for_manuscript.tsv` | Every statistic quoted in the text, with its label |
-| `sessionInfo.txt` | R and package versions of the run |
 
 ## Reproducibility notes
 
