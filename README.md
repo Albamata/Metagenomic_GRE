@@ -2,7 +2,7 @@
 
 **Cellular and vesicular metagenomes of the Guadalquivir River estuary**
 
-Code for the Master's thesis **"Exploring the Bacteria Extracellular Vesicles fraction of the Guadalquivir River estuary"** (Alba Mata González, Máster Universitario en Análisis de Datos Ómicos y Biología de Sistemas, Universidad de Sevilla – Universidad Internacional de Andalucía).
+Code for the Master's thesis **"Cellular and vesicular metagenomes are partially decoupled along the salinity of the Guadalquivir River estuary"** (Alba Mata González, Máster Universitario en Análisis de Datos Ómicos y Biología de Sistemas, Universidad de Sevilla – Universidad Internacional de Andalucía).
 
 The study compares the cellular fraction (CF) and a vesicle-enriched fraction (VF) of the microbiome along the salinity gradient of the Guadalquivir River estuary (SW Spain), using shotgun metagenomics. This repository holds the two scripts that turn the annotation tables into every figure, table and statistic of the manuscript.
 
@@ -57,7 +57,7 @@ The exact package versions of a run are written to `outputs/sessionInfo.txt`.
 
 ## Input data
 
-The input files are not in this repository. [State here where they are: accession number of the raw reads, or "available from the authors on request".]
+The input files are not in this repository. 
 
 Upstream processing, done before these scripts:
 
@@ -94,7 +94,7 @@ What the script does:
 3. Sums raw read counts of all ORFs that share a KO, per station.
 4. Divides each sum by the mean ORF length of that KO and scales it by a denominator **shared by all samples of both fractions**.
 
-Because of step 4, the `TPM_` columns are not normalised within each sample. The R script converts them to within-sample proportions where a per-sample composition is needed.
+Because of step 4, the `TPM_` columns are not normalised within each sample.
 
 ## Step 2 – `02_GRE_CF_VF_analysis.R`
 
@@ -111,7 +111,7 @@ Because of step 4, the `TPM_` columns are not normalised within each sample. The
 | `in_kegg_tpm` | `kegg_tpm.tsv` | Step 1 |
 | `in_kegg_tax` | `kegg_tax.tsv` | Step 1 |
 | `in_env` | `metadata_2024_11_11.xlsx` | Physico-chemical data per station |
-| `in_ko_path`, `in_path_names`, `in_ko_info` | `ko_path_tbl.rds`, `pathway_names_tbl.rds`, `ko_info_tbl.rds` | KEGG pathway membership and names, retrieved with KEGGREST on [date]. If the first two are missing and KEGGREST is installed, the script downloads them again |
+| `in_ko_path`, `in_path_names`, `in_ko_info` | `ko_path_tbl.rds`, `pathway_names_tbl.rds`, `ko_info_tbl.rds` | KEGG pathway membership and names, retrieved with KEGGREST on 26/05/2026. If the first two are missing and KEGGREST is installed, the script downloads them again |
 | `in_ncyc`, `in_ncyc_sheet` | `Resultado_FC_only_PN_plus_FV.xlsx` | Abundance of NCycDB gene families per station |
 | `in_ncyc_sets` | `Ncyccompleteness.xlsx` | Gene families of each nitrogen-cycle process |
 
